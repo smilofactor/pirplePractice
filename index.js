@@ -17,7 +17,7 @@ var _data = require('./lib/data');
 
 //TESTING
 //@TODO delete
-_data.update('test','newFile',{'this is the new message' : 'returning this message'},function(err){
+_data.delete('test','newFile',function(err){
   console.log('this was the error',err);
 });
 
