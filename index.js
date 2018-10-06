@@ -15,12 +15,11 @@ var fs = require('fs');
 var _data = require('./lib/data');
 
 
-//TESTING
-//@TODO delete
-_data.delete('test','newFile',function(err){
-  console.log('this was the error',err);
-});
-
+//Experiment with @TODO
+/////
+//
+//
+//
 
 
 //Instantiate the HTTP server
