@@ -12,6 +12,7 @@ var url = require('url');
 var StringDecoder = require('string_decoder').StringDecoder;
 var config = require('./config');
 var fs = require('fs');
+var handlers = require('./lib/handlers');
 
 
 //Instantiate the HTTP server
@@ -133,25 +134,9 @@ var unifiedServer = function(req,res) {
 };
 
 
-//Define the handlers
-var handlers = {};
-
-//Sample handler
-handlers.sample = function(data,callback) {
-  //Call back an http status code, and a payload object
-  callback(406,{'name' : 'sample handler'});
-};
-
-
-//Not found handler
-handlers.notFound = function(data,callback) {
-  callback(404);
-};
-
-
 //Define a request router
 var router = {
-  'sample' : handlers.sample
+  'ping' : handlers.ping
   
 };
 
